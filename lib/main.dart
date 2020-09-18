@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Website to App',
+      title: 'Learn to code',
       theme: ThemeData(
         primaryColor: Color(0xFF2a2a40),
       ),

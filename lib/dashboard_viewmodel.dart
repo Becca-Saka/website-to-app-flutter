@@ -42,10 +42,10 @@ class DashboardViewModel extends  BaseViewModel{
   notifyListeners();
  }
 
- goback() async{
+ Future<bool> goback() async{
     bool cangoback = await flutterWebViewPlugin.canGoBack();
     if(cangoback == true){
-      flutterWebViewPlugin.goBack();
+      await flutterWebViewPlugin.goBack();
     }else{
       await flutterWebViewPlugin.close();
       navigationService.back();

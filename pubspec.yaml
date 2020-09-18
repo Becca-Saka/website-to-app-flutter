@@ -23,7 +23,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-#  webview_flutter: ^0.3.22+1
   flutter_webview_plugin: ^0.3.11
   stacked: ^1.3.4
   stacked_services: ^0.5.4+3
@@ -40,6 +39,23 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  flutter_launcher_name: ^0.0.1
+  flutter_launcher_icons: ^0.8.0
+  flutter_native_splash: ^0.1.9
+
+flutter_icons:
+  android: "launcher_icon"
+  image_path: "assets/images/fcc_secondary_small.png"
+  adaptive_icon_background: "0a0a23" 
+
+flutter_launcher_name:
+  name: "FreeCodeCamp"
+
+flutter_native_splash:
+  image: assets/images/fcc_primary_large.png
+  color: "0a0a23"
+  android_disable_fullscreen: true
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

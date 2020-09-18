@@ -21,26 +21,19 @@ class WebView extends StatelessWidget {
       builder:(context, model, child)=>WillPopScope(
         onWillPop: (){
           // model.goback();
-          return model.goback()??false;
+          return model.goback()??true;
         },
               child: WebviewScaffold(
           url: selectedUrl,
           javascriptChannels: jsChannels,
           mediaPlaybackRequiresUserGesture: false,
           appBar: AppBar(
+            elevation:0.0,
             leading: IconButton(
-              icon: Icon(Icons.arrow_back),
-              onPressed: () async{
-                bool cangoback = await model.flutterWebViewPlugin.canGoBack();
-                if(cangoback == true){
-                  model.flutterWebViewPlugin.goBack();
-                }else{
-                  model.flutterWebViewPlugin.close();
-                  Navigator.pop(context);
-                }
-              },
+              icon: Icon(Icons.arrow_back, color: Colors.black,),
+              onPressed: () async => await model.goback(),
             ),
-            title: const Text('Website to App'),
+            backgroundColor: Colors.grey[50]
 
           ),
           withZoom: true,
